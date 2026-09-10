@@ -13,4 +13,116 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--article-font-family);
+  font-variation-settings: var(--article-font-weight-regular);
+  background: var(--dotted-gradient);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  font-family: var(--header-and-button-font-family);
+
+  display: grid;
+  gap: 20px;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  margin-inline: auto;
+  margin-block-start: 98px;
+  margin-block-end: 96px;
+  min-block-size: var(--header-block-size);
+  inline-size: var(--header-inline-size);
+  /* вот тут добавить clamp 98 -...- 100 для отсутпа */
+}
+
+.container {
+  border: 2px solid #000;
+  font-weight: var(--header-and-button-font-weight-regular);
+  margin-inline: auto;
+  background-color: #fff;
+}
+
+/* из-за странного дизайна header в котором рамка находится вне блока мне приходится
+создавать новый класс, потому что у основного элемента страницы рамка находится внутри блока */
+.article-container {
+  min-block-size: var(--main-block-size);
+  inline-size: var(--main-inline-size);
+}
+
+.hero {
+  font-size: clamp(49px, 4.51vw, 65px);
+}
+
+.hero-title {
+  font-size: clamp(14px, 1.6vw, 23px);
+  text-transform: uppercase;
+}
+
+/* начало основного блока */
+
+.article__title {
+  font-size: var(--basic-font-size);
+  font-variation-settings: var(--article-font-weight-bold);
+  /* border: 2px solid #000; */
+  padding-inline: 10px;
+  padding-block: 6px;
+  line-height: 18px;
+}
+
+.memory-piece__image {
+  display: block; /* Убирает базовый строчный отступ снизу картинки */
+  width: 100%;
+  height: auto; /* Или height: 100% / конкретная высота, если это заложено в макете */
+  object-fit: cover;
+  object-position: center;
+}
+
+.sheet {
+  margin-block: 25px;
+  margin-inline: 25px;
+  display: grid;
+  gap: 25px;
+}
+
+.memory-piece__description {
+  font-size: 18px;
+}
+
+.card__like-button {
+  margin-inline-start: auto;
+  display: flex;
+  align-items: center;
+  font-family: var(--header-and-button-font-family);
+  font-size: var(--button-font-size);
+  background-color: transparent;
+  border: none;
+  gap: 5px;
+  padding: 0;
+}
+
+.button__text {
+  font-family: var(--header-and-button-font-family);
+  display: flex;
+  min-inline-size: 130px;
+  min-block-size: 38px;
+  border: 2px solid #000;
+  align-items: center;
+  justify-content: center;
+}
+
+/* конец осн блока, дольше футера нет, так что здесь будет конец кода */
+
+.hidden {
+  display: none;
+}
+
+.yes {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.footer {
+  display: flex;
 }
