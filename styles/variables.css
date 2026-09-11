@@ -27,14 +27,14 @@
     ),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
 
-  --header-inline-size: clamp(375px, 48.9vw, 704px);
-  --header-block-size: clamp(327px, 25.83vw, 372px);
-
   --main-inline-size: clamp(375px, 48.75vw, 700px);
   --main-block-size: clamp(327px, 25.83vw, 372px);
 
   --basic-font-size: 18px;
   --button-font-size: 14px;
+
+  --contour-color: #000;
+  --animation-fill-color: #f00;
 }
 
 /* кароче, сделай все PP если начнутся проблемы с адаптивом, то сноси все нахер и пиши как указао в макете.
