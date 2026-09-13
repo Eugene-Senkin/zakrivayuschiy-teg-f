@@ -7,7 +7,11 @@
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
-
+сайты используемые в данном проекту
+https://www.pexels.com/de-de/suche/?q=marathone взял от туда дедушку марафонца
+https://unsplash.com/s/photos/cosmonaut?license=free взял оттуда космонавта
+https://www.pexels.com/de-de/foto/traditionelles-holzsegelboot-auf-der-ostsee-in-estland-37276842/ фото галеры
+https://unsplash.com/photos/a-black-and-white-photo-of-a-train-track-OiYoOtOcYKg бибизяна и рельсы
 */
 
 .page {
@@ -16,30 +20,33 @@
   font-family: var(--article-font-family);
   font-variation-settings: var(--article-font-weight-regular);
   background: var(--dotted-gradient);
+  background-color: var(--background-page-color);
   background-size: cover;
   background-attachment: fixed;
 }
 
 .header {
   font-family: var(--header-and-button-font-family);
+  margin-block-start: var(--header-margin-block-start);
+  margin-block-end: var(--header-margin-block-end);
   display: grid;
   align-content: center;
   justify-items: center;
   gap: 20px;
-  margin-block-start: 98px;
-  margin-block-end: 96px;
 }
 
 .hero {
-  font-size: clamp(49px, 4.51vw, 65px);
+  font-size: var(--adaptive-hero-title-font-size);
 }
-/* переделать font size через сайт */
+
 .hero-title {
-  font-size: clamp(14px, 1.6vw, 23px);
+  font-size: var(--adaptive-hero-description-font-size);
   text-transform: uppercase;
 }
 
-.yes {
+/* начало основного блока */
+
+.main {
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -49,60 +56,135 @@
   font-weight: var(--header-and-button-font-weight-regular);
   min-block-size: var(--main-block-size);
   max-inline-size: var(--main-inline-size);
-  border: 2px solid #000;
+  border: 2px solid var(--color-dark);
+  background-color: var(--color-light);
   margin-inline: auto;
-  background-color: #fff;
 }
-
-/* начало основного блока */
 
 .article__title {
   font-size: var(--basic-font-size);
   font-variation-settings: var(--article-font-weight-bold);
+  border-bottom: 2px solid var(--color-dark);
   padding-inline: 10px;
-  padding-block: 6px;
-  line-height: 18px;
+  padding-block: 5px;
+}
+
+.watermark {
+  position: relative;
+}
+
+.watermark__text {
+  font-size: var(--button-font-size);
+  font-family: var(--header-and-button-font-family);
+  text-transform: uppercase;
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  text-shadow:
+    -1px -1px 0 var(--color-light),
+    1px -1px 0 var(--color-light),
+    -1px 1px 0 var(--color-light),
+    1px 1px 0 var(--color-light);
+}
+
+@supports (-webkit-text-stroke: 1px var(--color-light)) {
+  .watermark__text {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--color-light);
+  }
 }
 
 .memory-piece__image {
   inline-size: 100%;
+  aspect-ratio: 1;
   display: block;
   object-fit: cover;
   object-position: center;
 }
 
 .memory-piece__text-block {
+  border-top: 2px solid var(--color-dark);
   padding: 25px;
   display: grid;
   gap: 25px;
+  line-height: 150%;
 }
 
 .memory-piece__description {
   font-size: var(--basic-font-size);
 }
 
+.buttons-block {
+  gap: 6px;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .card__like-button {
-  margin-inline-start: auto;
-  background-color: transparent;
   border: none;
   gap: 5px;
+  block-size: 38px;
   padding: 0;
 }
 
+.card__like-button:focus-visible {
+  outline: none;
+}
+
 .buttons {
-  display: flex;
-  align-items: center;
+  background-color: var(--color-light);
   font-size: var(--button-font-size);
   font-family: var(--header-and-button-font-family);
+  display: flex;
+  align-items: center;
+  border: none;
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  color: var(--color-light);
+  padding: 0;
+}
+
+/* эффекты при наведении */
+
+.buttons:focus {
+  outline: none;
+}
+
+.buttons:not(.card__icon-button):focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--color-dark);
+}
+
+.buttons:not(.card__icon-button)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-dark);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  border: none;
+}
+
+.buttons:not(.card__icon-button):hover::before {
+  transform: translateX(0);
 }
 
 .button__text {
   display: flex;
   min-inline-size: 130px;
   min-block-size: 38px;
-  border: 2px solid #000;
+  border: 2px solid var(--color-light);
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 1;
+  color: var(--color-light);
+  mix-blend-mode: difference;
 }
 
 .card__icon-floppy {
@@ -111,21 +193,46 @@
 
 .save-container {
   margin-inline: auto;
+  margin-block-end: 100px;
+}
+
+.save-memories .buttons .button__text {
+  width: 100%;
+  height: 100%;
 }
 
 .card__floppy-button {
-  border: 2px solid #000;
+  border: 2px solid var(--color-dark);
   gap: 8px;
-  min-inline-size: 336px /*сделать адаптив*/;
+  min-inline-size: clamp(306px, 26.23vw, 336px);
   min-block-size: 55px;
   padding-inline: 18px;
+}
+
+.card__floppy-icon {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+
+  fill: var(--color-light);
 }
 
 .button__text-save {
   border: none;
 }
 
-/* аниции */
+.card__icon-button {
+  border: 2px solid transparent;
+  padding: 0;
+  transition: border-color 0.3s ease;
+}
+
+.card__icon-button:focus-visible {
+  outline: none;
+  border-color: var(--color-dark);
+}
+
+/* анимации */
 
 .like-icon {
   transform-origin: center;
@@ -148,37 +255,37 @@
 }
 
 .like-icon:hover .core {
-  fill: var(--contour-color);
+  fill: var(--color-dark);
   transition: fill linear 0.3s 0s;
 }
 
 .like-icon:hover .main-body {
-  fill: var(--contour-color);
+  fill: var(--color-dark);
   transition: fill linear 0.3s 0.05s;
 }
 
 .like-icon:active .core {
-  fill: var(--animation-fill-color);
+  fill: var(--color-scarlet);
   transition: fill linear 0.3s 0s;
 }
 
 .like-icon:active .main-body {
-  fill: var(--animation-fill-color);
+  fill: var(--color-scarlet);
   transition: fill linear 0.3s 0.05s;
 }
 
 .like-icon.is-liked .core {
-  fill: var(--animation-fill-color);
+  fill: var(--color-scarlet);
   transition: fill linear 0.3s 0s;
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--animation-fill-color);
+  fill: var(--color-scarlet);
   transition: fill linear 0.3s 0.06s;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--animation-fill-color);
+  fill: var(--color-scarlet);
   transition: fill linear 0.3s 0.05s;
 }
 
@@ -210,9 +317,60 @@
   align-items: center;
 }
 
-/* тут эффекты при наведении */
+.memory-piece__description-modal {
+  font-family: var(--header-and-button-font-family);
+  font-size: var(--button-font-size);
+  line-height: 150%;
+  text-transform: uppercase;
+}
 
-.button__text {
-  outline: none;
-  text-shadow: 2px 2px 0 aliceblue;
+@media (width <= 376px) {
+  .card__floppy-button {
+    flex-direction: column;
+    gap: 8px;
+    padding-block: 16px;
+  }
+
+  .card__floppy-button .button__text {
+    min-block-size: 0;
+  }
+
+  .card__floppy-icon {
+    width: 29px;
+    height: 29px;
+  }
+}
+
+/* фильтры */
+
+.sepia-filter {
+  filter: sepia(0.6);
+}
+
+.opacity-filter {
+  filter: opacity(0.8);
+}
+
+.grayscale-filter {
+  filter: grayscale(75%);
+}
+
+.contrast-filter {
+  filter: contrast(2);
+}
+
+.brightness-filter {
+  filter: brightness(0.7);
+}
+
+.multi-filter {
+  filter: hue-rotate(0.5turn) opacity(0.9);
+}
+
+.invert-filter {
+  filter: invert(1);
+}
+
+.blur-filter {
+  filter: blur(3px);
 }
