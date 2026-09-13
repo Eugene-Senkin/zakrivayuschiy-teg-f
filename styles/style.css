@@ -7,12 +7,9 @@
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
-сайты используемые в данном проекту
-https://www.pexels.com/de-de/suche/?q=marathone взял от туда дедушку марафонца
-https://unsplash.com/s/photos/cosmonaut?license=free взял оттуда космонавта
-https://www.pexels.com/de-de/foto/traditionelles-holzsegelboot-auf-der-ostsee-in-estland-37276842/ фото галеры
-https://unsplash.com/photos/a-black-and-white-photo-of-a-train-track-OiYoOtOcYKg бибизяна и рельсы
 */
+
+/* все фотографии взяты из бесплатных источников */
 
 .page {
   min-inline-size: 320px;
@@ -44,7 +41,7 @@ https://unsplash.com/photos/a-black-and-white-photo-of-a-train-track-OiYoOtOcYKg
   text-transform: uppercase;
 }
 
-/* начало основного блока */
+/* основной блок */
 
 .main {
   display: flex;
