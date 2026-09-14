@@ -130,16 +130,15 @@
   font-family: var(--header-and-button-font-family);
   display: flex;
   align-items: center;
+  justify-content: center;
   transition: 0.3s ease;
   position: relative;
   overflow: hidden;
   color: var(--contrast-color);
   padding: 0;
-  display: flex;
   min-inline-size: 130px;
   min-block-size: 38px;
   border: 2px solid var(--secondary-color);
-  justify-content: center;
 }
 
 .dialog__button-text {
