@@ -17,7 +17,6 @@
   font-family: var(--article-font-family);
   font-variation-settings: var(--article-font-weight-regular);
   background: var(--dotted-gradient);
-  background-color: var(--background-page-color);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -26,6 +25,7 @@
   font-family: var(--header-and-button-font-family);
   margin-block-start: var(--header-margin-block-start);
   margin-block-end: var(--header-margin-block-end);
+  min-block-size: var(--main-block-size);
   display: grid;
   align-content: center;
   justify-items: center;
@@ -51,17 +51,16 @@
 
 .container {
   font-weight: var(--header-and-button-font-weight-regular);
-  min-block-size: var(--main-block-size);
   max-inline-size: var(--main-inline-size);
-  border: 2px solid var(--color-dark);
-  background-color: var(--color-light);
+  border: 2px solid var(--secondary-color);
+  background-color: var(--contrast-color);
   margin-inline: auto;
 }
 
-.article__title {
+.memory-piece__title {
   font-size: var(--basic-font-size);
   font-variation-settings: var(--article-font-weight-bold);
-  border-bottom: 2px solid var(--color-dark);
+  border-bottom: 2px solid var(--secondary-color);
   padding-inline: 10px;
   padding-block: 5px;
 }
@@ -80,16 +79,16 @@
   top: 25px;
   right: 25px;
   text-shadow:
-    -1px -1px 0 var(--color-light),
-    1px -1px 0 var(--color-light),
-    -1px 1px 0 var(--color-light),
-    1px 1px 0 var(--color-light);
+    -1px -1px 0 var(--contrast-color),
+    1px -1px 0 var(--contrast-color),
+    -1px 1px 0 var(--contrast-color),
+    1px 1px 0 var(--contrast-color);
 }
 
-@supports (-webkit-text-stroke: 1px var(--color-light)) {
+@supports (-webkit-text-stroke: 1px var(--contrast-color)) {
   .watermark__text {
     text-shadow: none;
-    -webkit-text-stroke: 1px var(--color-light);
+    -webkit-text-stroke: 1px var(--contrast-color);
   }
 }
 
@@ -102,18 +101,17 @@
 }
 
 .memory-piece__text-block {
-  border-top: 2px solid var(--color-dark);
+  border-top: 2px solid var(--secondary-color);
   padding: 25px;
   display: grid;
   gap: 25px;
-  line-height: 150%;
 }
 
 .memory-piece__description {
   font-size: var(--basic-font-size);
 }
 
-.buttons-block {
+.memory-piece__buttons-block {
   gap: 6px;
   display: flex;
   justify-content: flex-end;
@@ -126,12 +124,8 @@
   padding: 0;
 }
 
-.card__like-button:focus-visible {
-  outline: none;
-}
-
 .buttons {
-  background-color: var(--color-light);
+  background-color: var(--contrast-color);
   font-size: var(--button-font-size);
   font-family: var(--header-and-button-font-family);
   display: flex;
@@ -140,8 +134,22 @@
   transition: 0.3s ease;
   position: relative;
   overflow: hidden;
-  color: var(--color-light);
+  color: var(--contrast-color);
   padding: 0;
+  display: flex;
+  min-inline-size: 130px;
+  min-block-size: 38px;
+  border: 2px solid var(--secondary-color);
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog__button-text {
+  text-transform: uppercase;
+}
+
+.line-through {
+  text-decoration: line-through;
 }
 
 /* эффекты при наведении */
@@ -150,37 +158,31 @@
   outline: none;
 }
 
-.buttons:not(.card__icon-button):focus-visible {
+.buttons:focus-visible {
   outline: none;
-  box-shadow: 2px 2px 0 var(--color-dark);
+  box-shadow: 2px 2px 0 var(--secondary-color);
 }
 
-.buttons:not(.card__icon-button)::before {
-  content: "";
+.buttons::before {
+  content: '';
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-dark);
+  background-color: var(--secondary-color);
   transform: translateX(-100%);
   transition: transform 0.5s ease-in-out;
   border: none;
 }
 
-.buttons:not(.card__icon-button):hover::before {
+.buttons:hover::before {
   transform: translateX(0);
 }
 
 .button__text {
-  display: flex;
-  min-inline-size: 130px;
-  min-block-size: 38px;
-  border: 2px solid var(--color-light);
-  align-items: center;
-  justify-content: center;
   position: relative;
   z-index: 1;
-  color: var(--color-light);
+  color: var(--contrast-color);
   mix-blend-mode: difference;
 }
 
@@ -193,13 +195,8 @@
   margin-block-end: 100px;
 }
 
-.save-memories .buttons .button__text {
-  width: 100%;
-  height: 100%;
-}
-
 .card__floppy-button {
-  border: 2px solid var(--color-dark);
+  border: 2px solid var(--secondary-color);
   gap: 8px;
   min-inline-size: clamp(306px, 26.23vw, 336px);
   min-block-size: 55px;
@@ -211,7 +208,7 @@
   z-index: 1;
   mix-blend-mode: difference;
 
-  fill: var(--color-light);
+  fill: var(--contrast-color);
 }
 
 .button__text-save {
@@ -222,17 +219,22 @@
   border: 2px solid transparent;
   padding: 0;
   transition: border-color 0.3s ease;
+  background-color: transparent;
+  block-size: 38px;
+  inline-size: 38px;
 }
 
 .card__icon-button:focus-visible {
   outline: none;
-  border-color: var(--color-dark);
+  border-color: var(--secondary-color);
 }
 
 /* анимации */
 
 .like-icon {
   transform-origin: center;
+  display: block;
+  justify-self: center;
 }
 
 .like-icon .heart {
@@ -252,37 +254,37 @@
 }
 
 .like-icon:hover .core {
-  fill: var(--color-dark);
+  fill: var(--secondary-color);
   transition: fill linear 0.3s 0s;
 }
 
 .like-icon:hover .main-body {
-  fill: var(--color-dark);
+  fill: var(--secondary-color);
   transition: fill linear 0.3s 0.05s;
 }
 
 .like-icon:active .core {
-  fill: var(--color-scarlet);
+  fill: var(--heart-color);
   transition: fill linear 0.3s 0s;
 }
 
 .like-icon:active .main-body {
-  fill: var(--color-scarlet);
+  fill: var(--heart-color);
   transition: fill linear 0.3s 0.05s;
 }
 
 .like-icon.is-liked .core {
-  fill: var(--color-scarlet);
+  fill: var(--heart-color);
   transition: fill linear 0.3s 0s;
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--color-scarlet);
+  fill: var(--heart-color);
   transition: fill linear 0.3s 0.06s;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--color-scarlet);
+  fill: var(--heart-color);
   transition: fill linear 0.3s 0.05s;
 }
 
@@ -304,8 +306,7 @@
 }
 
 .save-memories::backdrop {
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .need-floppy {

@@ -1,11 +1,11 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --article-font-family: "Inter-Variable", sans-serif;
-  --article-font-weight-regular: "wght" 410;
-  --article-font-weight-bold: "wght" 715;
+  --article-font-family: 'Inter-Variable', sans-serif;
+  --article-font-weight-regular: 'wght' 410;
+  --article-font-weight-bold: 'wght' 715;
 
-  --header-and-button-font-family: "PressStart2P", sans-serif;
+  --header-and-button-font-family: 'PressStart2P', fantasy;
   --header-and-button-font-weight-regular: 400;
 
   --dotted-gradient:
@@ -37,11 +37,7 @@
   --basic-font-size: 18px;
   --button-font-size: 14px;
 
-  --background-page-color: #e7e7e7;
-  --color-light: #fff;
-  --color-dark: #000;
-  --color-scarlet: #f00;
+  --contrast-color: #fff;
+  --secondary-color: #000;
+  --heart-color: #f00;
 }
-
-/* кароче, сделай все PP если начнутся проблемы с адаптивом, то сноси все нахер и пиши как указао в макете.
-если прям вообще криминал, если можно сделать симбиоз, то оставляем */

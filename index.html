@@ -1,8 +1,7 @@
 <!doctype html>
-
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
@@ -21,8 +20,8 @@
       <p class="hero-title">закрывающий тег</p>
     </header>
     <main class="main">
-      <section class="container memory-piece">
-        <h2 class="article__title">
+      <article class="container memory-piece">
+        <h2 class="memory-piece__title">
           Фритрек и нулевой спринт: Подготовка к работе
         </h2>
         <div class="watermark">
@@ -30,8 +29,9 @@
             src="./images/z_sprint_my_cmpr_photo.jpg"
             alt="книжная полка с книгами про экономику, софт-скилы и програмирование"
             class="memory-piece__image sepia-filter"
+            loading="lazy"
           />
-          <div class="watermark__text">переизбыток информации</div>
+          <span class="watermark__text">переизбыток информации</span>
         </div>
         <div class="memory-piece__text-block">
           <p class="memory-piece__description">
@@ -43,12 +43,13 @@
             В момент прохождения нулевого спринта активно изучал профессию
             frontend-разработчика. Тогда было страшно, сколько технологий
             предстоит изучить, а модуль по JavaScript вообще чуть не развернул
-            меня. Но мне помогли и убедили, что <del>дальше только хуже</del> со
-            временем и практикой знания придут.
+            меня. Но мне помогли и убедили, что
+            <span class="line-through">дальше только хуже</span> со временем и
+            практикой знания придут.
           </p>
 
-          <div class="buttons-block">
-            <button class="buttons card__icon-button">
+          <div class="memory-piece__buttons-block">
+            <button class="card__icon-button" type="button">
               <svg
                 class="like-icon"
                 width="39"
@@ -62,7 +63,7 @@
                   <path
                     class="contour"
                     d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
-                    fill="var(--color-dark)"
+                    fill="var(--secondary-color)"
                   />
                   <path
                     class="main-body"
@@ -78,7 +79,7 @@
                 <path
                   class="sparks"
                   d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
-                  fill="var(--color-scarlet)"
+                  fill="var(--heart-color)"
                 />
               </svg>
             </button>
@@ -87,9 +88,9 @@
             </button>
           </div>
         </div>
-      </section>
-      <section class="container memory-piece">
-        <h2 class="article__title">1 спринт: Я — чистый лист</h2>
+      </article>
+      <article class="container memory-piece">
+        <h2 class="memory-piece__title">1 спринт: Я — чистый лист</h2>
         <div class="watermark">
           <img
             src="./images/f_sprint_my_cmpr_photo.jpg"
@@ -97,7 +98,7 @@
             class="memory-piece__image opacity-filter"
             loading="lazy"
           />
-          <div class="watermark__text">первые макеты</div>
+          <span class="watermark__text">первые макеты</span>
         </div>
         <div class="memory-piece__text-block">
           <p class="memory-piece__description">
@@ -110,12 +111,11 @@
           <p class="memory-piece__description">
             Перед началом первого спринта я успел немного потренироваться на
             очень простых макетах. Благодаря этому материал дался мне немного
-            полегче, но на практическом задании пришлось &laquo;Вспомнить
-            всё&raquo;.
+            полегче, но на практическом задании пришлось «Вспомнить всё».
           </p>
 
-          <div class="buttons-block">
-            <button class="buttons card__icon-button">
+          <div class="memory-piece__buttons-block">
+            <button class="card__icon-button" type="button">
               <svg
                 class="like-icon"
                 width="39"
@@ -129,7 +129,7 @@
                   <path
                     class="contour"
                     d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
-                    fill="var(--color-dark)"
+                    fill="var(--secondary-color)"
                   />
                   <path
                     class="main-body"
@@ -145,7 +145,7 @@
                 <path
                   class="sparks"
                   d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
-                  fill="var(--color-scarlet)"
+                  fill="var(--heart-color)"
                 />
               </svg>
             </button>
@@ -154,9 +154,9 @@
             </button>
           </div>
         </div>
-      </section>
-      <section class="container memory-piece">
-        <h2 class="article__title">1 спринт: А если не получится?</h2>
+      </article>
+      <article class="container memory-piece">
+        <h2 class="memory-piece__title">1 спринт: А если не получится?</h2>
         <div class="watermark">
           <img
             src="./images/f_2_sprint_my_compr_photo.jpg"
@@ -164,7 +164,7 @@
             class="memory-piece__image grayscale-filter"
             loading="lazy"
           />
-          <div class="watermark__text">смятение</div>
+          <span class="watermark__text">смятение</span>
         </div>
         <div class="memory-piece__text-block">
           <p class="memory-piece__description">
@@ -179,8 +179,8 @@
             тоже станет так тяжело, что захочется всё бросить и уйти.
           </p>
 
-          <div class="buttons-block">
-            <button class="buttons card__icon-button">
+          <div class="memory-piece__buttons-block">
+            <button class="card__icon-button" type="button">
               <svg
                 class="like-icon"
                 width="39"
@@ -194,7 +194,7 @@
                   <path
                     class="contour"
                     d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
-                    fill="var(--color-dark)"
+                    fill="var(--secondary-color)"
                   />
                   <path
                     class="main-body"
@@ -210,7 +210,7 @@
                 <path
                   class="sparks"
                   d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
-                  fill="var(--color-scarlet)"
+                  fill="var(--heart-color)"
                 />
               </svg>
             </button>
@@ -219,9 +219,9 @@
             </button>
           </div>
         </div>
-      </section>
-      <section class="container memory-piece">
-        <h2 class="article__title">2 спринт: Погоня за идеалом</h2>
+      </article>
+      <article class="container memory-piece">
+        <h2 class="memory-piece__title">2 спринт: Погоня за идеалом</h2>
         <div class="watermark">
           <img
             src="./images/s_sprint_my_compr_photo.jpg"
@@ -229,7 +229,7 @@
             class="memory-piece__image contrast-filter"
             loading="lazy"
           />
-          <div class="watermark__text">исследование верстки</div>
+          <span class="watermark__text">исследование верстки</span>
         </div>
         <div class="memory-piece__text-block">
           <p class="memory-piece__description">
@@ -247,8 +247,8 @@
             проекты. Сложно искать то, чего не существует &#x1F643;
           </p>
 
-          <div class="buttons-block">
-            <button class="buttons card__icon-button">
+          <div class="memory-piece__buttons-block">
+            <button class="card__icon-button" type="button">
               <svg
                 class="like-icon"
                 width="39"
@@ -262,7 +262,7 @@
                   <path
                     class="contour"
                     d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
-                    fill="var(--color-dark)"
+                    fill="var(--secondary-color)"
                   />
                   <path
                     class="main-body"
@@ -278,7 +278,7 @@
                 <path
                   class="sparks"
                   d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
-                  fill="var(--color-scarlet)"
+                  fill="var(--heart-color)"
                 />
               </svg>
             </button>
@@ -287,9 +287,9 @@
             </button>
           </div>
         </div>
-      </section>
-      <section class="container memory-piece">
-        <h2 class="article__title">2 спринт: О тех, кто рядом</h2>
+      </article>
+      <article class="container memory-piece">
+        <h2 class="memory-piece__title">2 спринт: О тех, кто рядом</h2>
         <div class="watermark">
           <img
             src="./images/s_2_sprint_my_cmpr_photo.jpg"
@@ -297,7 +297,7 @@
             class="memory-piece__image brightness-filter"
             loading="lazy"
           />
-          <div class="watermark__text">наставник и мы</div>
+          <span class="watermark__text">наставник и мы</span>
         </div>
         <div class="memory-piece__text-block">
           <p class="memory-piece__description">
@@ -316,8 +316,8 @@
             время.
           </p>
 
-          <div class="buttons-block">
-            <button class="buttons card__icon-button">
+          <div class="memory-piece__buttons-block">
+            <button class="card__icon-button" type="button">
               <svg
                 class="like-icon"
                 width="39"
@@ -331,7 +331,7 @@
                   <path
                     class="contour"
                     d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
-                    fill="var(--color-dark)"
+                    fill="var(--secondary-color)"
                   />
                   <path
                     class="main-body"
@@ -347,7 +347,7 @@
                 <path
                   class="sparks"
                   d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
-                  fill="var(--color-scarlet)"
+                  fill="var(--heart-color)"
                 />
               </svg>
             </button>
@@ -356,9 +356,9 @@
             </button>
           </div>
         </div>
-      </section>
-      <section class="container memory-piece">
-        <h2 class="article__title">3 спринт: Обходные стратегии</h2>
+      </article>
+      <article class="container memory-piece">
+        <h2 class="memory-piece__title">3 спринт: Обходные стратегии</h2>
         <div class="watermark">
           <img
             src="./images/t_sprint_my_cmpr_photo.jpg"
@@ -366,7 +366,7 @@
             class="memory-piece__image multi-filter"
             loading="lazy"
           />
-          <div class="watermark__text">literally me</div>
+          <span class="watermark__text">literally me</span>
         </div>
         <div class="memory-piece__text-block">
           <p class="memory-piece__description">
@@ -380,8 +380,8 @@
             возможность выбрать своё собственное решение.
           </p>
 
-          <div class="buttons-block">
-            <button class="buttons card__icon-button">
+          <div class="memory-piece__buttons-block">
+            <button class="card__icon-button" type="button">
               <svg
                 class="like-icon"
                 width="39"
@@ -395,7 +395,7 @@
                   <path
                     class="contour"
                     d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
-                    fill="var(--color-dark)"
+                    fill="var(--secondary-color)"
                   />
                   <path
                     class="main-body"
@@ -411,7 +411,7 @@
                 <path
                   class="sparks"
                   d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
-                  fill="var(--color-scarlet)"
+                  fill="var(--heart-color)"
                 />
               </svg>
             </button>
@@ -420,9 +420,9 @@
             </button>
           </div>
         </div>
-      </section>
-      <section class="container memory-piece">
-        <h2 class="article__title">3 спринт: Когда опускаются руки</h2>
+      </article>
+      <article class="container memory-piece">
+        <h2 class="memory-piece__title">3 спринт: Когда опускаются руки</h2>
         <div class="watermark">
           <img
             src="./images/t_2_sprint_mu_cmpr_photo.jpg"
@@ -430,7 +430,7 @@
             class="memory-piece__image invert-filter"
             loading="lazy"
           />
-          <div class="watermark__text">no focus</div>
+          <span class="watermark__text">no focus</span>
         </div>
         <div class="memory-piece__text-block">
           <p class="memory-piece__description">
@@ -447,8 +447,8 @@
             возвращался снова заряженным и готовым усваивать новую информацию.
           </p>
 
-          <div class="buttons-block">
-            <button class="buttons card__icon-button">
+          <div class="memory-piece__buttons-block">
+            <button class="card__icon-button" type="button">
               <svg
                 class="like-icon"
                 width="39"
@@ -462,7 +462,7 @@
                   <path
                     class="contour"
                     d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
-                    fill="var(--color-dark)"
+                    fill="var(--secondary-color)"
                   />
                   <path
                     class="main-body"
@@ -478,7 +478,7 @@
                 <path
                   class="sparks"
                   d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
-                  fill="var(--color-scarlet)"
+                  fill="var(--heart-color)"
                 />
               </svg>
             </button>
@@ -487,9 +487,9 @@
             </button>
           </div>
         </div>
-      </section>
-      <section class="container memory-piece">
-        <h2 class="article__title">«Сейчас я здесь»</h2>
+      </article>
+      <article class="container memory-piece">
+        <h2 class="memory-piece__title">«Сейчас я здесь»</h2>
         <div class="watermark">
           <img
             src="./images/this_sprint_my_cmpr_photo.jpg"
@@ -497,7 +497,7 @@
             class="memory-piece__image blur-filter"
             loading="lazy"
           />
-          <div class="watermark__text">предвкушение</div>
+          <span class="watermark__text">предвкушение</span>
         </div>
         <div class="memory-piece__text-block">
           <p class="memory-piece__description">
@@ -514,8 +514,8 @@
             JavaScript!
           </p>
 
-          <div class="buttons-block">
-            <button class="buttons card__icon-button">
+          <div class="memory-piece__buttons-block">
+            <button class="card__icon-button" type="button">
               <svg
                 class="like-icon"
                 width="39"
@@ -529,7 +529,7 @@
                   <path
                     class="contour"
                     d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
-                    fill="var(--color-dark)"
+                    fill="var(--secondary-color)"
                   />
                   <path
                     class="main-body"
@@ -545,7 +545,7 @@
                 <path
                   class="sparks"
                   d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
-                  fill="var(--color-scarlet)"
+                  fill="var(--heart-color)"
                 />
               </svg>
             </button>
@@ -554,11 +554,12 @@
             </button>
           </div>
         </div>
-      </section>
-      <section class="save-container">
+      </article>
+      <article class="save-container">
         <button
           class="buttons card__floppy-button"
           onclick="window['menu-dialog'].showModal()"
+          type="button"
         >
           <svg
             class="card__floppy-icon"
@@ -566,7 +567,7 @@
             height="21"
             aria-hidden="true"
           >
-            <use href="#floppy"></use>
+            <use href="./svg/icon.svg#floppy"></use>
           </svg>
           <span class="button__text button__text-save"
             >Сохранить на память</span
@@ -575,40 +576,22 @@
         <dialog id="menu-dialog" class="save-memories">
           <div class="need-floppy">
             <svg class="card__icon-floppy" width="39" height="39">
-              <use href="#floppy" />
+              <use href="./svg/icon.svg#floppy" />
             </svg>
             <span class="memory-piece__description-modal"
               >Вставьте дискету, чтобы продолжить</span
             >
           </div>
-          <button class="buttons" onclick="window['menu-dialog'].close()">
-            <span class="button__text"> ок</span>
+          <button
+            class="buttons"
+            onclick="window['menu-dialog'].close()"
+            type="button"
+          >
+            <span class="button__text dialog__button-text">ок</span>
           </button>
         </dialog>
-      </section>
+      </article>
     </main>
     <script src="./scripts/like.js"></script>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="visually-hidden"
-      aria-hidden="true"
-    >
-      <symbol viewBox="0 0 39 39" id="floppy">
-        <path
-          fill="currentcolor"
-          d="M0 0h3v3H0zM0 3h3v3H0zM0 6h3v3H0zM0 9h3v3H0zM0 12h3v3H0zM0 15h3v3H0zM0 18h3v3H0zM0
-   21h3v3H0zM0 24h3v3H0zM0 27h3v3H0zM0 30h3v3H0zM0 33h3v3H0zM0 36h3v3H0zM33 0v3h-3V0zM30 0v3h-3V0zM27
-    0v3h-3V0zM24 0v3h-3V0zM21 0v3h-3V0zM18 0v3h-3V0zM15 0v3h-3V0zM12 0v3H9V0zM9 0v3H6V0zM6 0v3H3V0zM36
-     3v3h-3V3zM9 6v3H6V6zM9 3v3H6V3zM9 9v3H6V9zM30 6v3h-3V6zM30 3v3h-3V3zM30 9v3h-3V9zM24 6v3h-3V6zM24
-      3v3h-3V3zM24 9v3h-3V9zM30 12v3h-3v-3zM27 12v3h-3v-3zM24 12v3h-3v-3zM21 12v3h-3v-3zM18 12v3h-3v-3zM15
-       12v3h-3v-3zM12 12v3H9v-3zM9 12v3H6v-3zM33 21v3h-3v-3zM30 21v3h-3v-3zM27 21v3h-3v-3zM24 21v3h-3v-3zM21
-        21v3h-3v-3zM18 21v3h-3v-3zM15 21v3h-3v-3zM12 21v3H9v-3zM9 21v3H6v-3zM33 24v3h-3v-3zM9 24v3H6v-3zM33
-         27v3h-3v-3zM9 27v3H6v-3zM33 30v3h-3v-3zM9 30v3H6v-3zM9 33v3H6v-3zM33 33v3h-3v-3zM36 36v3h-3v-3zM33
-          36v3h-3v-3zM30 36v3h-3v-3zM27 36v3h-3v-3zM24 36v3h-3v-3zM21 36v3h-3v-3zM18 36v3h-3v-3zM15 36v3h-3v-3zM12
-           36v3H9v-3zM9 36v3H6v-3zM6 36v3H3v-3zM39 39h-3v-3h3zM39 36h-3v-3h3zM39 33h-3v-3h3zM39 30h-3v-3h3zM39
-            27h-3v-3h3zM39 24h-3v-3h3zM39 21h-3v-3h3zM39 18h-3v-3h3zM39 15h-3v-3h3zM39 12h-3V9h3zM39 9h-3V6h3z"
-        />
-      </symbol>
-    </svg>
   </body>
 </html>
