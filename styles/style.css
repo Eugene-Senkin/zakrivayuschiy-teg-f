@@ -296,7 +296,7 @@
   animation: sparksFly 0.3s ease-in 0.3s;
 }
 
-/* модалка */
+/*  модалка */
 
 .save-memories[open] {
   max-inline-size: 353px;
