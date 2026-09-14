@@ -28,9 +28,9 @@
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
 
   --main-inline-size: clamp(375px, 260.5634px + 30.5164vw, 700px);
-  --main-block-size: clamp(327px, 311.1549px + 4.2254vw, 372px);
   --header-margin-block-start: clamp(98px, 100.7px - 0.188vw, 100px);
   --header-margin-block-end: clamp(96px, 101.41px - 0.376vw, 100px);
+  --header-padding-block: clamp(120px, 116.4789px + 0.939vw, 130px);
 
   --adaptive-hero-title-font-size: clamp(49px, 43.366px + 1.502vw, 65px);
   --adaptive-hero-description-font-size: clamp(14px, 10.831px + 0.845vw, 23px);

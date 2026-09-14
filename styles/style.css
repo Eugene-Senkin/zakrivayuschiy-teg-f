@@ -16,7 +16,8 @@
   min-block-size: 100dvb;
   font-family: var(--article-font-family);
   font-variation-settings: var(--article-font-weight-regular);
-  background: var(--dotted-gradient);
+  background-image: var(--dotted-gradient);
+  background-color: var(--contrast-color);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -25,7 +26,7 @@
   font-family: var(--header-and-button-font-family);
   margin-block-start: var(--header-margin-block-start);
   margin-block-end: var(--header-margin-block-end);
-  min-block-size: var(--main-block-size);
+  padding-block: var(--header-padding-block);
   display: grid;
   align-content: center;
   justify-items: center;
